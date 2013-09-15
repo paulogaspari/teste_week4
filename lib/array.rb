@@ -1,9 +1,9 @@
 class Array
 
 	def inject_2
-		memo ||= self.shift
-		self.each { |element| memo = yield(memo, element) }
-		memo
+	  	sum = 0  	
+	  	self.each {|element| sum+= element}
+	  	sum
 	end
 
 end
