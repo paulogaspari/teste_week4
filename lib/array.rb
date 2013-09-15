@@ -1,12 +1,9 @@
-
 class Array
 
-#  cant use inject name because it fucks up rspec (says google)
-
-	def inspector
-		"fuck this shit, it's sunday"
+	def inject_2
+		memo ||= self.shift
+		self.each { |element| memo = yield(memo, element) }
+		memo
 	end
-
-
 
 end
